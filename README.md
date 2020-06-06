@@ -12,6 +12,10 @@ Here's how to deploy it on CentOS systems:
 sudo yum install firewalld
 sudo service firewalld start
 sudo systemctl enable firewalld
+
+check:
+sudo service firewalld status
+firewall-cmd --list-all
 ```
 
 ## Deploy and Configure Database
@@ -19,9 +23,13 @@ sudo systemctl enable firewalld
 1. Install MariaDB
 
 ```
-sudo yum install mariadb-server
+sudo yum install -y mariadb-server
 sudo vi /etc/my.cnf
 sudo service mariadb start
+
+check status:
+service mariadb status
+
 sudo systemctl enable mariadb
 ```
 
